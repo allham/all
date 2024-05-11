@@ -6,6 +6,9 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
+    /* background-image: url('images/assasin3.png');
+    background-repeat: no-repeat;
+    background-size: cover; */
     background: #050e2d;
 }
 header {
@@ -67,5 +70,56 @@ header .action .searchBx input {
     border: none;
     font-size: 1em;
     color: #222;
-
+}
+/* Home Banner */
+.banner {
+    position:relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .bg {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .bg .content {
+    width: 50%;
+    height: 100%;
+}
+.banner .bg .content h2 {
+    font-size: 4em;
+    letter-spacing: 1px;
+    color: #fff;
+}
+.banner .bg .content p {
+    font-size: 1em;
+    color: #dbd9d9;
+    letter-spacing: 1px;
+}
+.banner .bg .content a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: solid 1px #1aeeef;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.banner .bg .content a:hover {
+    background: #1aeeef;
+    border: none;
+    color: #050e2d;
+    box-shadow: 0 0 10px #1aeeef;
+}
+.banner .bg img {
+    width: 600px;
 }
