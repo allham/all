@@ -120,7 +120,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card" data-item="mobile">
+                <div class="card" data-item="pc">
                     <img src="images/assasin6.jpeg" alt="some gaming motive">
                     <div class="content">
                         <h4>Battle Grounds Mobile</h4>
@@ -166,6 +166,22 @@
                 </div>
             </div>
         </div>
+        <!--Tournaments -->
+        <div class="tournaments">
+            <h2>Live Tournaments</h2>
+            <div class="boxBx">
+                <div class="box">
+                    <img src="#" alt="tournaments illustration">
+                    <div class="content">
+                        <h4><span>50</span>Matches in progress...</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur 
+                            adipisicing elit. Dicta, ex?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script>
             // Sticky Navbar//
             window.addEventListener('scroll', function(){
@@ -184,7 +200,7 @@
                     this.classList.add('active');
                     let dataFilter = this.getAttribute('data-filter');
 
-                    for(let k=0; k< card.length; k++){
+                    for(let k=0; k<card.length; k++){
                         card[k].classList.remove('active');
                         card[k].classList.add('hide');
 
