@@ -295,3 +295,6 @@ header .action .searchBx input {
     border: none;
     box-shadow: 0 0 10px #1aeeef;
 }
+.games .cardBx .card.hide {
+    display: none;
+}

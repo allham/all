@@ -183,6 +183,16 @@
                     }
                     this.classList.add('active');
                     let dataFilter = this.getAttribute('data-filter');
+
+                    for(let k=0; k< card.length; k++){
+                        card[k].classList.remove('active');
+                        card[k].classList.add('hide');
+
+                        if(card[k].getAttribute('data-item') == dataFilter || dataFilter == 'all'){
+                            card[k].classlist.remove('hide');
+                            card[k].classlist.add('active');
+                        }
+                    }
                 })
             }
         </script>
