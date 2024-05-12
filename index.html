@@ -2,11 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, nitial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>GamingWebsite</title>
         <link rel="stylesheet" href="style.css"> 
-        <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylasheet">
-
+        <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+        <!-- <script src="script.js" differ></script> -->
     </head>
     <body>
         <header>
@@ -21,6 +21,7 @@
             <div class="action">
                 <div class="searchBx">
                     <a href="#"><box-icon name='search-alt-2'></box-icon></a>
+                    <!-- <a href="#"><i class="'bx bx-search"></i></a> -->
                     <input type="text" placeholder="Search games">
                 </div>
             </div>
@@ -55,13 +56,13 @@
             </div>
             <img src="images/csgo.png" alt="gaming illustration">
         </div>
+        <!-- Games -->
         <div class="games">
-            <!-- Games -->
             <h2>Popular Games</h2>
             <ul>
-                <li class="list active">All</li>
-                <li class="list">Pc games</li>
-                <li class="list">Mobile games</li>
+                <li class="list active" data-filter="all">All</li>
+                <li class="list" data-filter="pc">Pc games</li>
+                <li class="list" data-filter="mobile">Mobile games</li>
             </ul>
             <div class="cardBx">
                 <div class="card" data-item="pc">
@@ -85,10 +86,11 @@
                             <a href="#">Play Now</a>
                         </div>
                     </div>
-                </div>                <div class="card" data-item="pc">
+                </div>                
+                <div class="card" data-item="pc">
                     <img src="images/assasin3.png" alt="some gaming motive">
                     <div class="content">
-                        <h4>Assasin Creed Valhalla</h4>
+                        <h4>Assassin Creed Valhalla</h4>
                         <div class="progress-line"><span></span></div>
                         <div class="info">
                             <p>Pricing<br><span>$10</span></p>
@@ -162,11 +164,27 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
             </div>
         </div>
+        <script>
+            // Sticky Navbar//
+            window.addEventListener('scroll', function(){
+                var header = document.querySelector('header');
+                header.classlist.toggle('sticky', window.scrollY > 0);
+            });
+
+            let list = document.querySelectorAll('.list');
+            let card= document.querySelectorAll('.card');
+
+            for(let i=0; i<list.length; i++){
+                list[i].addEventListener('click', function(){
+                    for(let j=0; j<list.length; j++){
+                        list[j].classList.remove('active');
+                    }
+                    this.classList.add('active');
+                    let dataFilter = this.getAttribute('data-filter');
+                })
+            }
+        </script>
     </body>
 </html>

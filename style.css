@@ -6,16 +6,13 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
-    /* background-image: url('images/assasin3.png');
-    background-repeat: no-repeat;
-    background-size: cover; */
     background: #050e2d;
 }
 /* Scroll Bar */
-::webkit-scrollbar {
+::-webkit-scrollbar {
     width: 12px;
 }
-::webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: #1aeeef;
     border-radius: 6px;
 }
@@ -31,7 +28,7 @@ header {
     transition: 0.5s;
     z-index: 1000;
 }
-header sticky {
+header.sticky {
     background: #1b2141;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
@@ -63,7 +60,8 @@ header ul li a:hover {
     box-shadow: 0 0 10px #1aeeef;
 }
 header .action .searchBx {
-    padding: 5px;margin: 5px;
+    padding: 5px;
+    margin: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,7 +82,7 @@ header .action .searchBx input {
 }
 /* Home Banner */
 .banner {
-    position:relative;
+    position: relative;
     width: 100%;
     min-height: 100vh;
     padding: 0 100px;
@@ -132,8 +130,6 @@ header .action .searchBx input {
     box-shadow: 0 0 10px #1aeeef;
 }
 
-
-
 .banner .bg img {
     width: 600px;
 }
@@ -168,7 +164,7 @@ header .action .searchBx input {
     border: solid 1px #1aeeef;
     text-decoration: none;
     font-weight: 700;
-    border-radius: 5px;;
+    border-radius: 5px;
     color: #fff;
     letter-spacing: 1px; 
 }
@@ -209,7 +205,7 @@ header .action .searchBx input {
     cursor: pointer;
     color: #fff;
 }
-.games ul li.active {
+.games ul li.active{
     background: #1aeeef;
     color: #050e2d;
     box-shadow: 0 0 10px #1aeeef;
