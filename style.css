@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 body {
     background: #050e2d;
@@ -281,7 +282,7 @@ header .action .searchBx input {
 .games .cardBx .card .info a {
     display: inline-block;
     padding: 10px 20px;
-    margin: 20px 0;
+    margin: 10px 0;
     border: solid 1px #1aeeef;
     text-decoration: none;
     font-weight: 700;
@@ -353,7 +354,7 @@ header .action .searchBx input {
 .tournaments .boxBx .box .content .watch {
     display: inline-block;
     padding: 10px 20px;
-    margin: 20px 0;
+    margin: 10px 0;
     background: #1aeeef;
     text-decoration: none;
     font-weight: 700;
@@ -371,7 +372,7 @@ header .action .searchBx input {
 .tournaments .boxBx .box .content .join {
     display: inline-block;
     padding: 10px 20px;
-    margin: 20px 0;
+    margin: 10px 0;
     border: solid 1px #1aeeef;
     text-decoration: none;
     font-weight: 700;
@@ -414,7 +415,7 @@ header .action .searchBx input {
     color: #fff;
 } 
 .contact .form .inputBx input,
- .contact .form .inputBx textarea {
+.contact .form .inputBx textarea {
     border: none;
     outline: none;
     padding: 10px;
@@ -446,4 +447,49 @@ header .action .searchBx input {
     border: none;
     color: #050e2d;
     box-shadow: 0 0 10px #1aeeef;
+}
+/* Footer */
+footer {
+    padding: 10px 100px;
+}
+footer .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .info .logo {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+}
+footer .info p {
+    color: #dbd9d9;
+}
+footer .info ul {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+footer .info ul li {
+    list-style: none;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #1aeeef;
+}
+footer .info ul li:hover {
+    background: #1aeeef;
+    border: none;
+    box-shadow: 0 0 10px #1aeeef;
+}
+footer .info ul li a i {
+    font-size: 1.5em;
+    color: #fff;
 }

@@ -12,23 +12,22 @@
         <header>
             <a href="#" class="logo">Gamers</a>
             <ul class="nav">
-                <li><a href="images/assasin11.png" target="_blank">Home</a></li>
-                <li><a href="images/assasin2.png" target="_blank">About</a></li>
-                <li><a href="images/assasin1.png" target="_blank">Games</a></li>
-                <li><a href="images/assasin4.jpeg" target="_blank">Tournaments</a></li>
-                <li><a href="images/assasin7.jpeg" target="_blank">Contacts</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#tournaments">Tournaments</a></li>
+                <li><a href="#contact">Contacts</a></li>
             </ul>
             <div class="action">
                 <div class="searchBx">
                     <a href="#"><box-icon name='search-alt-2'></box-icon></a>
-                    <!-- <a href="#"><i class="'bx bx-search"></i></a> -->
                     <input type="text" placeholder="Search games">
                 </div>
             </div>
-            <div class="toggleMenu"></div>
+            <div class="toggleMenu" onclick="toggleMenu();"></div>
         </header>
         <!-- Home Banner -->
-        <div class="banner">
+        <div class="banner" id="home">
             <div class="bg">
                 <div class="content">
                     <h2>A New Home for<br> Game Lovers</h2>
@@ -43,7 +42,7 @@
             </div>
         </div>
         <!-- About -->
-        <div class="about">
+        <div class="about" id="about">
             <div class="contentBx">
                 <h2>About Us</h2>
                 <p>
@@ -54,10 +53,10 @@
                 </p>
                 <a href="#">Read more</a>
             </div>
-            <img src="images/stick.avif" alt="gaming illustration">
+            <img src="images/assasin5.jpeg" alt="gaming illustration">
         </div>
         <!-- Games -->
-        <div class="games">
+        <div class="games" id="games">
             <h2>Popular Games</h2>
             <ul>
                 <li class="list active" data-filter="all">All</li>
@@ -88,7 +87,7 @@
                     </div>
                 </div>                
                 <div class="card" data-item="pc">
-                    <img src="images/assasin3.png" alt="some gaming motive">
+                    <img src="images/gamingPhoto1.avif" alt="some gaming motive">
                     <div class="content">
                         <h4>Assassin Creed Valhalla</h4>
                         <div class="progress-line"><span></span></div>
@@ -167,7 +166,7 @@
             </div>
         </div>
         <!--Tournaments -->
-        <div class="tournaments">
+        <div class="tournaments" id="tournaments">
             <h2>Live Tournaments</h2>
             <div class="boxBx">
                 <div class="box">
@@ -260,7 +259,7 @@
             </div>
         </div>
         <!-- Contact -->
-        <div class="contact">
+        <div class="contact" id="contact">
             <img src="images/csgo.png" alt="gaming motiv">
             <div class="form">
                 <h1>Contact Us</h1>
@@ -283,12 +282,33 @@
         </div>
 
         <!-- Footer -->
+        <footer>
+            <div class="info">
+                <a href="#" class="logo">Gamers</a>
+                <p><i class='bx bx-copyright' ></i>2024. All Rights Reserved</p>
+                <ul>
+                    <li><a ref="#"><i class='bx bxl-facebook' ></i></a></li>
+                    <li><a ref="#"><i class='bx bxl-instagram' ></i></a></li>
+                    <li><a ref="#"><i class='bx bxl-twitter' ></i></a></li>
+                    <li><a ref="#"><i class='bx bxl-youtube' ></i></a></li>
+                </ul>
+            </div>
+        </footer>
         <script>
             // Sticky Navbar//
             window.addEventListener('scroll', function(){
                 var header = document.querySelector('header');
-                header.classlist.toggle('sticky', window.scrollY > 0);
+                header.classList.toggle('sticky', window.scrollY > 0);
             });
+            // Responsive Navbar//
+            function toggleMenu(){
+                const toggleMenu = document.querySelector('.toggleMenu');
+                const nav = document.querySelector('.nav');
+                toggleMenu.classList.toggle('active')
+                nav.classList.toggle('active')
+            }
+
+            /* Filterable Cards*/
 
             let list = document.querySelectorAll('.list');
             let card= document.querySelectorAll('.card');
