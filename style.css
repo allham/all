@@ -502,6 +502,16 @@ footer .info ul li a i {
 footer .info ul li:hover a i{
     color: #050e2d;
 }
+.animeX {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+.animeX.active {
+    transform: translateY(0);
+    opacity: 1;
+}
 
 /* Responsive Design */
 
